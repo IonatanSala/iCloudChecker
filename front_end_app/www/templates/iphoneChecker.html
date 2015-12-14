@@ -1,0 +1,16 @@
+<ion-view title="Iphone Checker">
+    <ion-content class="padding" class="has-header" id="iphone-checker">
+        <form class="list">
+            <label class="item item-input">
+                <input ng-model="imei" type="text" placeholder="Enter IMEI Here">
+            </label>
+        </form>
+        <button  ng-click="getDetails(imei)" class="button button-stable button-block ">CHECK</button>
+        <ion-list>
+        	<ion-item ng-repeat="detail in phoneDetails">
+        		<h2>{{detail.name}}</h2>
+        		<p>{{detail.value}}</p>
+        	</ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
